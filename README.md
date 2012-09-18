@@ -1,4 +1,4 @@
 informer
 ========
 
-my first app (just for fun)
+my first Qt app (just for fun)
