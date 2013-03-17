@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Информатор (сервер)</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>60</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionOpenDB"/>
+    <addaction name="actionNewDB"/>
+    <addaction name="separator"/>
+    <addaction name="actionPreference"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Действия</string>
+    </property>
+    <addaction name="actionEditUsersTable"/>
+    <addaction name="actionEditOtdelTable"/>
+    <addaction name="actionFind"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Навигация</string>
+    </property>
+    <addaction name="actionNewRecord"/>
+    <addaction name="actionPreviousRecord"/>
+    <addaction name="actionNextRecord"/>
+    <addaction name="actionSaveRecord"/>
+    <addaction name="actionDeleteRecord"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenDB"/>
+   <addaction name="actionNewDB"/>
+   <addaction name="separator"/>
+   <addaction name="actionNewRecord"/>
+   <addaction name="actionPreviousRecord"/>
+   <addaction name="actionNextRecord"/>
+   <addaction name="actionSaveRecord"/>
+   <addaction name="actionDeleteRecord"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpenDB">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/open_folder.png</normaloff>:/Images/open_folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Открыть базу данных</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+O</string>
+   </property>
+  </action>
+  <action name="actionNewDB">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/new_db.png</normaloff>:/Images/new_db.png</iconset>
+   </property>
+   <property name="text">
+    <string>Новая база данных</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+N</string>
+   </property>
+  </action>
+  <action name="actionPreference">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/preference.png</normaloff>:/Images/preference.png</iconset>
+   </property>
+   <property name="text">
+    <string>Настройки</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+P</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/quit.png</normaloff>:/Images/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Q</string>
+   </property>
+  </action>
+  <action name="actionEditOtdelTable">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/otdel.png</normaloff>:/Images/otdel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Редактировать таблицу &quot;Отделы&quot;</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/zoom_cursor.png</normaloff>:/Images/zoom_cursor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Поиск</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Справка</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="actionEditUsersTable">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/users.png</normaloff>:/Images/users.png</iconset>
+   </property>
+   <property name="text">
+    <string>Редактировать таблицу &quot;Пользователи&quot;</string>
+   </property>
+  </action>
+  <action name="actionNewRecord">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/button_plus_blue.png</normaloff>:/Images/button_plus_blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>Новая запись</string>
+   </property>
+  </action>
+  <action name="actionPreviousRecord">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/left_arrow.png</normaloff>:/Images/left_arrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Предыдущая запись</string>
+   </property>
+  </action>
+  <action name="actionNextRecord">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/right_arrow.png</normaloff>:/Images/right_arrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Следующая запись</string>
+   </property>
+  </action>
+  <action name="actionSaveRecord">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/save_record.png</normaloff>:/Images/save_record.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить запись</string>
+   </property>
+  </action>
+  <action name="actionDeleteRecord">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Images/button_minus_blue.png</normaloff>:/Images/button_minus_blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить запись</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
