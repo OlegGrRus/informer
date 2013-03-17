@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/open_folder.png</file>
+        <file>Images/quit.png</file>
+        <file>Images/save_folder.png</file>
+        <file>Images/zoom_cursor.png</file>
+        <file>Images/left_arrow.png</file>
+        <file>Images/new_db.png</file>
+        <file>Images/preference.png</file>
+        <file>Images/right_arrow.png</file>
+        <file>Images/button_minus_blue.png</file>
+        <file>Images/button_plus_blue.png</file>
+        <file>Images/save_record.png</file>
+        <file>Images/otdel.png</file>
+        <file>Images/users.png</file>
+    </qresource>
+</RCC> 
